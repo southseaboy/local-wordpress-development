@@ -36,6 +36,10 @@ DATABASE_ROOT_PASSWORD=test
 
 Now cd to your directory with `Dockerfile` in it and run `docker compose up --build` to build the image and bring it online. You should be able to access your site at `host.docker.internal` and see the WordPress install screen. If you want to keep the docker process running in the background (without terminal logging all files accessed) run `docker compose up --build -d`.
 
+### PHPMyAdmin
+
+This is available at `host.docker.internal:8081` with the `DATABASE_USER` and `DATABASE_PASSWORD` you set in your `.env` file
+
 ## Linux Users
 
 You will have issues trying to edit the files in your `wp-content` directory to do any development. macOS and Windows have virtualisation layers that make this not a problem on those platforms. To fix this on linux you need to use the `setfacl` command changing `<localuser>` to the local user you're logged in under.
