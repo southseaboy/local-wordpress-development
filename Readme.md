@@ -9,14 +9,18 @@ For video tutorials on setup:
 
 You will need [Docker Desktop](https://www.docker.com/products/docker-desktop/) and [mkcert](https://github.com/FiloSottile/mkcert) installed.
 
-Clone this repository to your local machine.
+Clone this repository to your local machine if you haven't already done so.
 
-`git clone git@github.com:wazooinc/local-wordpress-development.git`
+`git clone git@github.com:southseaboy/local-wordpress-development.git`
 
-Copy the `env.example` file to `.env`.
+Copy the environment file then edit it - Fill in the variables to match something like below. NB Ctrl-X then Y to quit the editor when done.
 
-Fill in the variables to match something like below.
+```
+cp env.example .env
+nano .env
+```
 
+example environment variables
 ```bash
 HOSTNAME=host.docker.internal
 
@@ -34,7 +38,7 @@ DATABASE_ROOT_PASSWORD=test
 
 `cd` into the `certs` directory and run `mkcert host.docker.internal` which should create two files called `host.docker.internal-key.pem` and `host.docker.internal.pem`.
 
-Now cd to your directory with `Dockerfile` in it and run `docker compose up --build` to build the image and bring it online. You should be able to access your site at `host.docker.internal` and see the WordPress install screen. If you want to keep the docker process running in the background (without terminal logging all files accessed) run `docker compose up --build -d`.
+Now cd back upto the `local-wordpress-development` directory and run `docker compose up --build` to build the image and bring it online. You should be able to access your site at `host.docker.internal` and see the WordPress install screen. If you want to keep the docker process running in the background (without terminal logging all files accessed) run `docker compose up --build -d`.
 
 ### PHPMyAdmin
 
