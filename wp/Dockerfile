@@ -1,4 +1,4 @@
-FROM wordpress:6.6.2-fpm-alpine
+FROM wordpress:fpm-alpine
 
 ## Bash
 RUN apk add --no-cache bash
