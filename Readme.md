@@ -13,7 +13,7 @@ Clone this repository to your local machine if you haven't already done so.
 
 `git clone git@github.com:southseaboy/local-wordpress-development.git`
 
-Copy the environment file then edit it - Fill in the variables to match something like below. NB Ctrl-X then Y to quit the editor when done.
+Copy the environment file then edit it and fill in the variables to match something like the example below. You can use any editor of your choice. If you use VS Code you need to Ctrl+s to save the file or if you use the nano editor in the linux shell (see commands immediately below)  use Ctrl+X then Y to quit the nano editor when done.
 
 ```
 cp env.example .env
